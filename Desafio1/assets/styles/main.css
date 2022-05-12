@@ -3,11 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: 'Inter';
+    color: #000000;
+}
 
 .page-header {
     display: flex;
     justify-content: center;
-    padding: 28px 0;
+    padding: 22px 0;
     background: #000000;
 }
 
@@ -15,19 +19,342 @@
     display: block;
 }
 
-.main-background {
+.main-background{
+    display: flex;
     width: 100%;
 }
 
+
+/* Infocard do TOPO - Imagem e textos*/
+.top-infocard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 66px 0 190px;
+}
+
+.top-infocard-text {
+    max-width: 766px;
+    text-align: center;
+}
+
+.top-infocard-subtitle{
+    font-weight: 400;
+    font-size: 32px;
+    text-transform: uppercase;
+ 
+}
+
+.top-inforcard-title{
+    font-weight: 500;
+    font-size: 48px;
+    margin-bottom: 24px;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+.top-infocard-description{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.top-infocard-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 50px 0px;
+   
+  }
+
+
+  /* Seção do Top Cards - icones e textos */
+.top-cards{      
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: 20px;
+    justify-content: center;
+    padding: 0 0 80px;
+      
+}
+
+.top-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 26px 26px 26px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.23);
+}
+
+.top-card-image {
+    display: flex;
+    margin-bottom: 26px;
+}
+
+.top-card-description {
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 300px;
+}
+
+  /*  Seção das imagens do computador   */ 
+    
+.middle-banner {
+    background-color: #e0e0e0;
+    width:100%;
+}
+
+
+.middle-wrapper {
+    position: relative;
+    width: 100%;
+    bottom: -140px;
+    display: flex;
+  
+}
+
+
+.middle-background-center {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    max-width: 90vw;
+    margin: 0 auto;
+    
+}
+
+
+.middle-background1,
+.middle-background2,
+.middle-background3 {
+    width: 100%;
+   
+}
+
+
+
+  /* Seção dos 4 cards - imagens e textos */ 
+
+.bottom-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    justify-content: center;
+    padding: 280px 138px 0px;
+ 
+}
+
+.bottom-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.10);
+    padding: 36px 32px 66px;
+}
+
+.bottom-card-description {
+    max-width: 300px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 16px;
+
+}
+
+.bottom-card-image {
+    margin-bottom: 14px;
+
+}
+
+
+
+  /* Seção final - texto (Title e Description) - imagem e textos */ 
+.bottom-infocard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 142px 0 180px;
+ 
+}
+
+.bottom-infocard-text {
+    max-width: 550px;
+    text-align: center;
+ 
+}
+
+.bottom-infocard-title {
+    text-align: center;
+    margin-bottom: 18px;
+    line-height: 20px;
+    font-weight: 600;
+    font-size: 32px;
+    width: fit-content;
+    margin: 0 auto;
+    padding-bottom: 15px;
+  
+}
+
+.bottom-infocard-description {
+    text-align: center;
+    max-width: 550px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 32px;
+    margin: 0 auto;
+             
+  }
+
+.bottom-infocard-image {
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+    max-width: 1360px;
+    margin-top: 32px;
+      
+}
+
+
+
+
+ /* Rodapé */ 
+
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 38px 0;
+    background: #000000;
+}
+
+.footer-text {
+    text-transform: uppercase;
+    line-height: 12px;
+    font-size: 10px;
+    color: #BDBDBD;
+}
+.footer-icons {
+    display: flex;
+    list-style: none;
+    margin-bottom: 16px;
+}
+
+.footer-icon {
+    margin: 0 8px;
+}
+
+
 @media screen and (max-width: 414px) {
-    .main-background-desktop {
+    .main-background-desktop,
+    .middle-background-desktop {
         display: none;
     }
 }
 
 @media screen and (min-width:415px) {
-    .main-background-mobile {
+    .main-background-mobile,
+    .middle-background-mobile {
         display: none;
     }
 
+}
+
+@media screen and (max-width: 768px) {
+    .top-cards {
+        grid-template-columns: 1fr;
+        padding: 36px 26px;
+    }
+
+    .bottom-cards {
+        margin-top: 114px;
+        padding: 0 26px;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+}
+
+@media screen and (max-width: 992px){
+    .top-infocard{
+        flex-direction: column;
+        padding: 84px 26 158px;
+
+    }
+
+    .top-infocard-text{
+        margin: 0 0 68px;
+    }
+
+    .top-infocard-subtitle{
+        font-size: 20px;
+    }
+
+    .top-inforcard-title{
+        margin-bottom: 20px;
+        font-size: 28px;
+    }
+    .top-infocard-image{
+        width: 100%;
+        max-width: 240px;
+    }
+
+}
+
+@media screen and (min-width:769px) and (max-width: 1200px) {
+    .top-cards {
+        grid-template-columns: repeat(2, max-content);
+       
+    }
+}
+
+
+
+@media screen and (min-width: 769px){
+    .middle-banner-mobile{
+      display: none;
+    }
+  }
+  
+
+
+@media screen and (min-width:769px) and (max-width: 992px) {
+    .bottom-card-description {
+        max-width: 280px;
+    }
+}
+
+@media screen and (min-width:993px) and (max-width:1200px) {
+    .top-infocard-text{
+        max-width: 520px;
+        margin-right: 70px;
+    }
+}
+
+@media(max-width: 768px){
+    .middle-background-center{
+        flex-wrap: wrap;
+    }
+    .middle-background1,
+    .middle-background2{
+        max-width: 175px;
+    }
+    .middle-background3{
+        max-width: 368px;
+        margin-top: 23px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1700px){
+    .middle-background1,
+    .middle-background2,
+    .middle-background3 {
+        max-width: 350px;
+    }
 }
